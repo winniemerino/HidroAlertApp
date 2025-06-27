@@ -1,0 +1,65 @@
+/* Estilos generales */
+
+
+.notificaciones-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra horizontalmente */
+  gap: 20px;
+  padding: 20px;
+}
+
+.notificaciones-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  height: 60px; 
+  margin-bottom: 25px;
+}
+
+.notificaciones-header h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #222;
+}
+
+.icono-config {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.notificacion {
+  width: 100%;
+  max-width: 600px;
+  min-width: 320px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  background-color: #FDFFF8;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+.notificacion img {
+  width: 28px;
+  height: 28px;
+  margin-top: 5px;
+}
+
+.notificacion p {
+  margin: 0;
+  color: #222;
+  font-size: 16px;
+}
+
+.notificacion a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}

@@ -1,0 +1,32 @@
+   body {
+      background-color: #EDF0E5; /* Cambia el color de fondo a azul claro */
+    }
+
+    .seccion-mapa {
+     background-color: #FDFFF8; /* O usa un código hexadecimal como #ADD8E6 */
+    font-family: Arial, Helvetica, sans-serif; /* Define la familia de fuentes */
+    font-size: 12px;             /* Define el tamaño de la fuente */
+    font-weight: normal;           /* Define el grosor de la fuente */
+    text-align: left;
+    border-radius: 6%; /* crea el círculo */
+    width: 500px; /* o cualquier tamaño deseado */
+    height: 500px;
+    padding-top: 20px;
+    padding-left: 20px;
+   }
+
+
+  .google-map {
+position: relative;
+padding-bottom: 50%;
+     
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 30;
+     right: 10px;
+     top: 30px;
+     position: absolute;
+}

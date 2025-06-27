@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menú HidroAlert</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="menu2.0.css" />
+    <link rel="stylesheet" href="menu-informate.css" />
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top-bar">
+        <img src="imagen/back.png" alt="Atrás" class="back-icon" />
+      </div>
+
+      <!-- Logo -->
+      <div class="logo">
+        <img src="imagen/logo.png" alt="Logo" />
+        <span>HidroAlert</span>
+      </div>
+
+      <!-- Usuario -->
+      <div id="user-section">
+        <div class="user-info">
+          <div class="user-img-wrapper">
+            <img
+              id="user-image"
+              src="imagen/user.png"
+              alt="User  Image"
+              class="user-img"
+            />
+            <button id="change-image-btn" class="icon-button">
+              <img src="imagen/edit.png" alt="Editar Imagen" />
+            </button>
+          </div>
+        </div>
+
+        <span id="user-name">Nombre Apellido</span>
+        <div class="location-info">
+          <img src="imagen/map.png" alt="Ubicación" />
+          <span id="user-location">Ubicación</span>
+        </div>
+      </div>
+
+      <hr class="divider" />
+
+      <!-- Menú -->
+      <div class="menu-item">
+        <img src="imagen/notify.png" alt="Notificaciones" />
+        Notificaciones
+      </div>
+
+      <div class="menu-item">
+        <img src="imagen/map.png" alt="Mapa" />
+        Mapa
+      </div>
+
+      <div class="menu-item" id="menu-historial">
+        <img src="imagen/history.png" alt="Historial" />
+        Historial
+      </div>
+
+      <!-- Botón informate -->
+      <div class="menu-item">
+        <img src="imagen/inform.png" alt="Infórmate" />
+        Infórmate
+      </div>
+      <!-- CONTENIDO DERECHO GENERAL -->
+      <div id="contenido-principal">
+        <!-- Sección de INFORMACIÓN -->
+        <div id="seccion-informate" class="contenido-seccion hidden">
+          <h2>Infórmate y actúa:</h2>
+
+          <div class="card">
+            <strong>Métodos básicos para purificar el agua</strong>
+            <p>
+              Hierve durante al menos 3 minutos a fuego alto. Deja enfriar
+              tapado. Método recomendado por la OMS.
+            </p>
+            <img src="imagen/hervir.jpg" alt="Hervir agua" />
+          </div>
+
+          <div class="card">
+            <strong>¿Qué hacer si hay escasez de agua en tu zona?</strong>
+            <p>
+              Ten un bidón de emergencia con agua potable. Activa las
+              notificaciones en HidroAlert para enterarte a tiempo.
+            </p>
+            <img src="imagen/grifo.jpg" alt="Grifo" />
+          </div>
+
+          <div class="card">
+            <strong>Cuidado y uso responsable del agua</strong>
+            <p>
+              Dúchate en menos de 5 minutos. Cierra el caño mientras te cepillas
+              los dientes.
+            </p>
+            <img src="imagen/save.webp" alt="Ahorro de agua" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Botón reporte -->
+      <div class="button-container">
+        <button class="btn-report">
+          <img src="imagen/report.png" alt="Reporte" /> Realizar un reporte
+        </button>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        ¿Tienes problemas? Ingresa a <br /><strong
+          ><a href="#">Preguntas Frecuentes</a></strong
+        >
+        <hr class="divider" />
+
+        <div class="logout">
+          <img src="imagen/close.png" alt="Cerrar Sesión" /> Cerrar Sesión
+        </div>
+      </div>
+    </div>
+
+    <div id="modal-reporte" class="modal hidden">
+      <div class="modal-reporte-box">
+        <h2>
+          REPORTAR UN PROBLEMA
+          <img src="imagen/alert.png" alt="!" class="icon-alert" />
+        </h2>
+
+        <!-- Opciones simplificadas -->
+        <div class="opciones-container">
+          <p class="opciones-titulo">Seleccione el tipo de problema:</p>
+          <div class="opciones-wrapper">
+            <label class="opcion-btn">
+              <input type="radio" name="problema" value="corte" />
+              <span class="opcion-circulo"></span>
+              Corte Imprevisto de Agua
+            </label>
+
+            <label class="opcion-btn">
+              <input type="radio" name="problema" value="contaminacion" />
+              <span class="opcion-circulo"></span>
+              Contaminación de Agua
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p class="form-label">Adjunte evidencia:</p>
+          <div
+            class="upload-area"
+            onclick="document.getElementById('evidencia').click()"
+          >
+            <img
+              id="preview-image"
+              src=""
+              alt="Vista previa"
+              style="display: none"
+            />
+            <div id="upload-placeholder">
+              <img
+                src="imagen/upload.png"
+                alt="Subir imagen"
+                class="upload-icon"
+              />
+            </div>
+            <input
+              type="file"
+              id="evidencia"
+              accept="image/*"
+              style="display: none"
+              onchange="mostrarVistaPrevia(this)"
+            />
+          </div>
+        </div>
+        <!-- Área de texto -->
+        <p class="form-label">Descripción o comentario:</p>
+        <textarea
+          class="form-box textarea-box"
+          placeholder="Describa el problema..."
+        ></textarea>
+
+        <div class="botones-accion">
+          <button class="btn-generar" onclick="generarReporte()">
+            Generar Reporte
+          </button>
+          <button class="btn-cancelar" onclick="cerrarModal('modal-reporte')">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Éxito -->
+    <div id="modal-exito" class="modal hidden">
+      <div class="modal-exito-box">
+        <img src="imagen/check.png" alt="Éxito" class="check-icon" />
+        <p>Reporte generado correctamente.</p>
+        <button onclick="cerrarExito()">Aceptar</button>
+      </div>
+    </div>
+
+    <input type="file" id="file-input" accept="image/*" style="display: none" />
+
+    <script src="menu.js"></script>
+    <script src="menu-informate.js"></script>
+  </body>
+</html>

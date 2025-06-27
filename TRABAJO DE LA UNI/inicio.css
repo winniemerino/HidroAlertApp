@@ -1,0 +1,251 @@
+
+/* ESTILOS GENERALES */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    min-height: 100vh;
+    background: url('../imagenes/fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    background-color: #1a5276; 
+    padding: 15px 0; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+    position: sticky;
+    top: 0; 
+    z-index: 1000; 
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    width: 90%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+/* Contenedor del logo */
+.logo-contenedor {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 50px; /* Altura del logo */
+    margin-right: 10px; /* Espacio a la derecha del logo */
+}
+
+.nombre-empresa {
+    font-size: 1.5rem; /* Tamaño de la fuente del nombre de la empresa */
+    font-weight: bold; /* Peso de la fuente */
+    color: white; /* Color del texto */
+}
+
+
+/* MENU DE NAVEGACION */
+
+.navegacion {
+    display: flex; /* Usar flexbox para alinear enlaces */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.quienes-somos {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Peso de la fuente */
+    margin-left: 25px; /* Espacio a la izquierda */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    transition: all 0.2s; /* Transición suave */
+}
+
+.quienes-somos:hover {
+    color: #aed6f1; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+.registrar {
+    color: white; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: 500; /* Peso de la fuente */
+    margin-left: 25px; /* Espacio a la izquierda */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    transition: all 0.2s; /* Transición suave */
+}
+
+.registrar:hover {
+    color: #aed6f1; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.icono {
+    margin-right: 6px; /* Espacio a la derecha del icono */
+}
+
+/* Botón de ingreso */
+.ingresar {
+    background-color: #2980b9; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 8px 18px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    font-weight: 500; /* Peso de la fuente */
+    margin-left: 25px; /* Espacio a la izquierda */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: all 0.2s; /* Transición suave */
+    display: flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    text-decoration: none; /* Sin subrayado */
+
+}
+
+.ingresar:hover {
+    background-color: #3498db; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+
+/* CONTENIDO PRINCIPAL */
+
+.contenido-principal {
+    padding: 80px 0; /* Espaciado superior e inferior */
+    position: relative; /* Posición relativa para el contenido */
+    z-index: 1; /* Asegura que esté por encima del fondo */
+}
+
+.fila {
+    display: flex; /* Usar flexbox para alinear columnas */
+    justify-content: space-between; /* Espacio entre columnas */
+    align-items: center; /* Centrar verticalmente */
+}
+
+.columna-texto {
+    flex: 1; /* Ocupa el espacio disponible */
+    min-width: 400px; /* Ancho mínimo */
+    padding: 60px; /* Espaciado interno */
+}
+
+.titulo-principal {
+    font-size: 3.9rem; /* Tamaño de la fuente del título */
+    font-weight: 700; /* Peso de la fuente */
+    margin-bottom: 20px; /* Espacio inferior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+}
+
+.subtitulo {
+    font-size: 1.2rem; /* Tamaño de la fuente del subtítulo */
+    line-height: 1.6; /* Altura de línea */
+    margin-bottom: 30px; /* Espacio inferior */
+    margin-right: auto; /* Alinear a la izquierda */
+}
+
+
+.reportes {
+    background-color: #0dc453; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 12px 28px; /* Espaciado interno */
+    border-radius: 4px; /* Bordes redondeados */
+    font-weight: 600; /* Peso de la fuente */
+    margin-left: 1px; /* Espacio a la izquierda */
+    cursor: pointer; /* Cambiar cursor al pasar el mouse */
+    transition: all 0.2s; /* Transición suave */
+    display: inline-flex; /* Usar flexbox para alinear icono y texto */
+    align-items: center; /* Centrar verticalmente */
+    text-decoration: none; /* Sin subrayado */
+
+}
+
+.reportes:hover {
+    background-color: #18ad51; /* Color al pasar el mouse */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+.logo-grande {
+    height: 300px; /* Altura del logo grande */
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7)); /* Sombra del logo */
+    animation: pulse 2s infinite; /* Animación de pulso */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.nombre-marca {
+    font-size: 2.5rem; /* Tamaño de la fuente del nombre de la marca */
+    font-weight: 700; /* Peso de la fuente */
+    margin-top: 20px; /* Espacio superior */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra del texto */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-align: center; /* Centrar texto */
+}
+
+
+/* DISEÑO RESPONSIVE */
+
+@media (max-width: 768px) {
+    .contenido-principal {
+        padding: 50px 0; /* Espaciado superior e inferior */
+        text-align: center; /* Centrar texto */
+    }
+    
+    .titulo-principal {
+        font-size: 2.2rem; /* Tamaño de la fuente del título en móviles */
+    }
+    
+    .subtitulo {
+        font-size: 1rem; /* Tamaño de la fuente del subtítulo en móviles */
+    }
+    
+    .logo-grande {
+        height: 200px; /* Altura del logo grande en móviles */
+        margin-top: 30px; /* Espacio superior */
+    }
+    
+    .navegacion {
+        flex-direction: column; /* Cambiar a columna en móviles */
+        align-items: center; /* Centrar elementos */
+    }
+    
+    .enlace-nav {
+        margin-left: 0; /* Sin margen a la izquierda en móviles */
+        margin-bottom: 10px; /* Espacio inferior entre enlaces */
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        flex-direction: column; /* Cambiar a columna en móviles */
+    }
+    
+    .logo-contenedor {
+        margin-bottom: 15px; /* Espacio inferior del logo */
+    }
+    
+    .navegacion {
+        width: 100%; /* Ancho completo en móviles */
+        justify-content: space-around; /* Espacio entre enlaces */
+    }
+}
