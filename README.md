@@ -1,4 +1,3 @@
-Healthy Solution: HidroAlert
 HidroAlert es una aplicación móvil desarrollada por la startup Healthy Solution, cuyo objetivo es monitorear y reportar cortes o contaminación del agua potable en tiempo real. Surge como respuesta a la falta de comunicación oportuna y confiable sobre el servicio de agua en zonas urbanas y rurales del Perú, lo cual afecta directamente la salud pública y la calidad de vida.
 
 Autores:
